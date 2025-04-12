@@ -27,13 +27,19 @@ nav a{
 
 /* flex container for containerization of articles */
 .container {
+	/* Containerization options for browser compatibility */
 	display: -ms-flexbox;	/* TWEENER - IE 10 */
 	display: -webkit-flex; 	/* NEW - Safari 6.1+, iOS 7.1+, BB10 */
 	display: flex; 			/* NEW, Spec - Firefox, Chrome, Opera */
-	/* Wrap options for each type */
-	-ms-flexbox: nowrap;
+	/* Wrap options for each browser type */
+	-ms-flex-wrap: nowrap;
 	-webkit-flex-wrap: nowrap;
 	flex-wrap: nowrap;
+	/* Flex orientation for each browser type */
+	-ms-flex-direction: row;
+	-webkit-flex-direction: row;
+	flex-direction: row;
+	/* Additional stylings */
 	justify-content: space-between;
 	max-width: 95%;
 	margin: 0 auto;
@@ -41,7 +47,7 @@ nav a{
 }
 
 /* New HTML types for labels */
-div.main {
+main {
 	/* flex sizing for each browser type */
 	-ms-flex: 0 3 auto;
 	-webkit-flex: 0 3 auto;
@@ -50,7 +56,7 @@ div.main {
 	display: block;
 	order: 2;
 }
-div.article {
+article {
 	margin-bottom: 20px;
 	padding: 10px 20px;
 	border: 1px solid rgb(145, 145, 145);
@@ -58,7 +64,7 @@ div.article {
 	margin-left: 10px;
 	background-color: #fff
 }
-div.article p {
+article p {
 	text-align: justify;
 }
 .post-meta {

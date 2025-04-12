@@ -71,32 +71,27 @@ body	{
 }
 */
 
-/* Non-flex compatible (aka webkit-flex): Safari 6.1+, iOS 7.1+, BB10 */
+/* Non-flex compatible (aka webkit-flex): Safari 6.1+, iOS 7.1+, BB10 
 @supports not (display: flex) {
 	.container {
 		display: -webkit-flex;
 		-webkit-flex-wrap: nowrap;
 		-webkit-flex-direction: row;
-		/* Additional stylings */
 		justify-content: space-between;
 		max-width: 95%;
 		margin: 0 auto;
 		padding: 20px;
 	}
 	.main {
-		/* webkit-flex settings */
 		-webkit-flex-grow: 3;
 		-webkit-flex-shrink: 0;
 		-webkit-flex-basis: 100px;
-		/* Other options */
 		order: 2;
 	}
 	.aside {
-		/* webkit-flex settings */
 		-webkit-flex-grow: 1;
 		-webkit-flex-shrink: 0;
 		-webkit-flex-basis: 100px;
-		/* Other options */
 		background-color: #EFEAD0;
 		padding: 10px;
 		border: 1px solid rgb(145, 145, 145);
@@ -104,6 +99,7 @@ body	{
 		margin-bottom: 100px;
 	}
 }
+*/
 /* END FLEX FEATURE QUERIES */
 
 /* New HTML types for labels */

@@ -28,6 +28,7 @@ nav a{
 /* flex container for containerization of articles */
 .container {
 	display: -webkit-box;	/* OLD - iOS 6-, Safari 3.1-6, BB7 */
+	display: -moz-box;		/* OLD - Firefox 19- (buggy) */
 	display: -ms-flexbox;	/* TWEENER - IE 10 */
 	display: -webkit-flex; 	/* NEW - Safari 6.1+, iOS 7.1+, BB10 */
 	display: flex; 			/* NEW, Spec - Firefox, Chrome, Opera */
@@ -40,6 +41,7 @@ nav a{
 
 /* New HTML types for labels */
 .main {
+	display: block;
 	flex: 3;
 	order: 2;
 }
@@ -64,6 +66,7 @@ nav a{
 }
 	
 .aside {
+	display: block;
 	flex: 1;
 	background-color: #EFEAD0;
 	padding: 10px;

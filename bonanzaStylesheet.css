@@ -20,6 +20,8 @@ body	{
 		margin: 0 auto;
 		padding: 20px;
 	}
+}
+@supports (flex-grow: 3) {
 	.main {
 		/* flex settings*/
 		flex-grow: 3;
@@ -28,6 +30,8 @@ body	{
 		/* Other options */
 		order: 2;
 	}
+}
+@supports (flex-grow: 1) {
 	.aside {
 		/* flex settings */
 		flex-grow: 1;

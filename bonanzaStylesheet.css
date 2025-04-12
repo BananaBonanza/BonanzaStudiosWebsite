@@ -6,37 +6,117 @@ body	{
 	padding: 0;
 }
 
-/* flex container for containerization of articles */
-.container {
-	/* Containerization options for browser compatibility */
-	display: -ms-flexbox;	/* TWEENER - IE 10 */
-	display: -webkit-flex; 	/* NEW - Safari 6.1+, iOS 7.1+, BB10 */
-	display: flex; 			/* NEW, Spec - Firefox, Chrome, Opera */
-	/* Wrap options for each browser type */
-	-ms-flex-wrap: nowrap;
-	-webkit-flex-wrap: nowrap;
-	flex-wrap: nowrap;
-	/* Flex orientation for each browser type */
-	-ms-flex-direction: row;
-	-webkit-flex-direction: row;
-	flex-direction: row;
-	/* Additional stylings */
-	justify-content: space-between;
-	max-width: 95%;
-	margin: 0 auto;
-	padding: 20px;
+/* FEATURE QUERIES FOR FLEX */
+
+/* default flex: NEW, Spec - Firefox, Chrome, Opera */
+@supports (display: flex) {
+	.container {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-direction: row;
+		/* Additional stylings */
+		justify-content: space-between;
+		max-width: 95%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	.main {
+		/* flex settings*/
+		flex-grow: 3;
+		flex-shrink: 0;
+		flex-basis: 100px;
+		/* Other options */
+		display: block;
+		order: 2;
+	}
+	.aside {
+		/* flex settings */
+		flex-grow: 3;
+		flex-shrink: 0;
+		flex-basis: 100px;
+		/* Other options */
+		display: block;
+		background-color: #EFEAD0;
+		padding: 10px;
+		border: 1px solid rgb(145, 145, 145);
+		order: 1;
+		margin-bottom: 100px;
+	}
 }
+/* default ms-flexbox: TWEENER - IE 10  */
+@supports (display: -ms-flexbox) {
+	.container {
+		display: -ms-flexbox;
+		-ms-flex-wrap: nowrap;
+		-ms-flex-direction: row;
+		/* Additional stylings */
+		justify-content: space-between;
+		max-width: 95%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	.main {
+		/* ms flex settings*/
+		-ms-flex-grow: 3;
+		-ms-flex-shrink: 0;
+		-ms-flex-basis: 100px;
+		/* Other options */
+		display: block;
+		order: 2;
+	}
+	.aside {
+		/* ms flex settings*/
+		-ms-flex-grow: 3;
+		-ms-flex-shrink: 0;
+		-ms-flex-basis: 100px;
+		/* Other options */
+		display: block;
+		background-color: #EFEAD0;
+		padding: 10px;
+		border: 1px solid rgb(145, 145, 145);
+		order: 1;
+		margin-bottom: 100px;
+	}
+}
+/* default webkit-flex: NEW - Safari 6.1+, iOS 7.1+, BB10 */
+@supports (display: -webkit-flex) {
+	.container {
+		display: -webkit-flex;
+		-webkit-flex-wrap: nowrap;
+		-webkit-flex-direction: row;
+		/* Additional stylings */
+		justify-content: space-between;
+		max-width: 95%;
+		margin: 0 auto;
+		padding: 20px;
+	}
+	.main {
+		/* webkit-flex settings */
+		-webkit-flex-grow: 3;
+		-webkit-flex-shrink: 0;
+		-webkit-flex-basis: 100px;
+		/* Other options */
+		display: block;
+		order: 2;
+	}
+	.aside {
+		/* webkit-flex settings */
+		-webkit-flex-grow: 1;
+		-webkit-flex-shrink: 0;
+		-webkit-flex-basis: 100px;
+		/* Other options */
+		display: block;
+		background-color: #EFEAD0;
+		padding: 10px;
+		border: 1px solid rgb(145, 145, 145);
+		order: 1;
+		margin-bottom: 100px;
+	}
+}
+/* END FLEX FEATURE QUERIES */
 
 /* New HTML types for labels */
-.main {
-	/* flex sizing for each browser type */
-	-ms-flex: 0 3 auto;
-	-webkit-flex: 0 3 auto;
-	flex: 0 3 auto;
-	/* Other options */
-	display: block;
-	order: 2;
-}
+
 .article {
 	margin-bottom: 20px;
 	padding: 10px 20px;
@@ -56,20 +136,6 @@ body	{
 	color: inherit;
 	text-decoration:none;
 }
-	
-.aside {
-	/* flex sizing for each browser type */
-	-ms-flex: 0 1 auto;
-	-webkit-flex: 0 1 auto;
-	flex: 0 1 auto;	
-	/* Other options */
-	display: block;
-	background-color: #EFEAD0;
-	padding: 10px;
-	border: 1px solid rgb(145, 145, 145);
-	order: 1;
-	margin-bottom: 100px;
-}
 .postList li{
 	margin-bottom: 5px;
 }
@@ -80,42 +146,6 @@ body	{
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-}
-
-
-/* div classes for splitscreen */
-/* Split screen in half */
-.split {
-	height: 10%;
-	width: 50%;
-	position: absolute;
-	z-index: 1;
-	/* top: 0; */
-	overflow-x: hidden;
-	padding-top: 20px;
-}
-/* control the left side */
-.leftSide {
-	left: 10;
-	background-color: #333;
-}
-/* control the right side */
-.rightSide {
-	right: 10;
-	background-color: red;
-}
-/* for content centered horizontally and vertically */
-.centerContent {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	text-align: center;
-}
-/* For centered images */
-.centerImage img {
-	width: 150px;
-	border-radius: 50%;
 }
 
 
@@ -130,7 +160,7 @@ div.topHeader {
 	border: 1px solid black;
 }
 
-/* table properties and styles */
+/* table properties and styles 
 table {
 	border: 1px solid black;
 	border-collapse: collapse;
@@ -143,7 +173,9 @@ th, td {
 	padding: 10px;
 }
 
-/* classes for aligning elements on the page */
+*/
+
+/* classes for aligning elements on the page 
 .center {
 	margin-left: auto;
 	margin-right: auto;
@@ -152,6 +184,8 @@ th, td {
 	margin-left: auto;
 	margin-right: 15px;
 }
+
+*/
 
 /* Top Navigation Bar */
 .topnav {

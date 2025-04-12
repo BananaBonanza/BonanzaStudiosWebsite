@@ -39,11 +39,11 @@ nav a{
 }
 
 /* New HTML types for labels */
-main {
+.main {
 	flex: 3;
 	order: 2;
 }
-article {
+.article {
 	margin-bottom: 20px;
 	padding: 10px 20px;
 	border: 1px solid rgb(145, 145, 145);
@@ -51,7 +51,7 @@ article {
 	margin-left: 10px;
 	background-color: #fff
 }
-article p {
+.article p {
 	text-align: justify;
 }
 .post-meta {
@@ -63,7 +63,7 @@ article p {
 	text-decoration:none;
 }
 	
-aside {
+.aside {
 	flex: 1;
 	background-color: #EFEAD0;
 	padding: 10px;
@@ -74,7 +74,7 @@ aside {
 .postList li{
 	margin-bottom: 5px;
 }
-footer {
+.footer {
 	background-color: #242424;
 	color: #fff;
 	text-align: center;
@@ -129,14 +129,6 @@ div.topHeader {
 	background-color:white;
 	text-align: center;
 	border: 1px solid black;
-}
-
-.main {
-	text-align:center;
-	background-color:white;
-	border: 1px solid black;
-	padding-left:5px;
-	padding-right:5px;
 }
 
 /* table properties and styles */

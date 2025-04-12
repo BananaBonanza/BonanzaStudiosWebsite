@@ -27,11 +27,12 @@ nav a{
 
 /* flex container for containerization of articles */
 .container {
-	display: -webkit-box;	/* OLD - iOS 6-, Safari 3.1-6, BB7 */
-	display: -moz-box;		/* OLD - Firefox 19- (buggy) */
 	display: -ms-flexbox;	/* TWEENER - IE 10 */
 	display: -webkit-flex; 	/* NEW - Safari 6.1+, iOS 7.1+, BB10 */
 	display: flex; 			/* NEW, Spec - Firefox, Chrome, Opera */
+	/* Wrap options for each type */
+	-ms-flexbox: nowrap;
+	-webkit-flex-wrap: nowrap;
 	flex-wrap: nowrap;
 	justify-content: space-between;
 	max-width: 95%;
@@ -41,8 +42,12 @@ nav a{
 
 /* New HTML types for labels */
 div.main {
+	/* flex sizing for each browser type */
+	-ms-flex: 0 3 auto;
+	-webkit-flex: 0 3 auto;
+	flex: 0 3 auto;
+	/* Other options */
 	display: block;
-	flex: 3;
 	order: 2;
 }
 div.article {
@@ -65,9 +70,13 @@ div.article p {
 	text-decoration:none;
 }
 	
-div.aside {
+aside {
+	/* flex sizing for each browser type */
+	-ms-flex: 0 1 auto;
+	-webkit-flex: 0 1 auto;
+	flex: 0 1 auto;	
+	/* Other options */
 	display: block;
-	flex: 1;
 	background-color: #EFEAD0;
 	padding: 10px;
 	border: 1px solid rgb(145, 145, 145);

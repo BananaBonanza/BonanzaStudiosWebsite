@@ -30,7 +30,7 @@ body	{
 	}
 	.aside {
 		/* flex settings */
-		flex-grow: 3;
+		flex-grow: 1;
 		flex-shrink: 0;
 		flex-basis: 100px;
 		/* Other options */
@@ -41,32 +41,27 @@ body	{
 		margin-bottom: 100px;
 	}
 }
-/* default ms-flexbox: TWEENER - IE 10  */
+/* default ms-flexbox: TWEENER - IE 10  
 @supports (display: -ms-flexbox) {
 	.container {
 		display: -ms-flexbox;
 		-ms-flex-wrap: nowrap;
 		-ms-flex-direction: row;
-		/* Additional stylings */
 		justify-content: space-between;
 		max-width: 95%;
 		margin: 0 auto;
 		padding: 20px;
 	}
 	.main {
-		/* ms flex settings*/
 		-ms-flex-grow: 3;
 		-ms-flex-shrink: 0;
 		-ms-flex-basis: 100px;
-		/* Other options */
 		order: 2;
 	}
 	.aside {
-		/* ms flex settings*/
 		-ms-flex-grow: 3;
 		-ms-flex-shrink: 0;
 		-ms-flex-basis: 100px;
-		/* Other options */
 		background-color: #EFEAD0;
 		padding: 10px;
 		border: 1px solid rgb(145, 145, 145);
@@ -74,8 +69,10 @@ body	{
 		margin-bottom: 100px;
 	}
 }
-/* default webkit-flex: NEW - Safari 6.1+, iOS 7.1+, BB10 */
-@supports (display: -webkit-flex) {
+*/
+
+/* Non-flex compatible (aka webkit-flex): Safari 6.1+, iOS 7.1+, BB10 */
+@supports not (display: flex) {
 	.container {
 		display: -webkit-flex;
 		-webkit-flex-wrap: nowrap;

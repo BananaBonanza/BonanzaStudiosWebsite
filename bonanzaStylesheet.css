@@ -7,7 +7,7 @@ body	{
 }
 
 /* Footer style */
-div.bs-footer {
+.bs-footer {
 	background-color: #242424;
 	color: #fff;
 	text-align: center;

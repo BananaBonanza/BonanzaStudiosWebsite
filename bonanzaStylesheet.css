@@ -6,15 +6,25 @@ body	{
 	padding: 0;
 }
 
-/* FEATURE QUERIES FOR FLEX */
+/* Footer style */
+bs-footer {
+	background-color: #242424;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
 
-/* default flex: NEW, Spec - Firefox, Chrome, Opera */
+/* FEATURE QUERIES FOR FLEX 
+
+/* default flex: NEW, Spec - Firefox, Chrome, Opera 
 @supports (display: flex) {
 	.container {
 		display: flex;
 		flex-wrap: nowrap;
 		flex-direction: row;
-		/* Additional stylings */
+		/* Additional stylings 
 		justify-content: space-between;
 		max-width: 95%;
 		margin: 0 auto;
@@ -23,21 +33,21 @@ body	{
 }
 @supports (flex-grow: 3) {
 	.main {
-		/* flex settings*/
+		/* flex settings 
 		flex-grow: 3;
 		flex-shrink: 0;
 		flex-basis: 100px;
-		/* Other options */
+		/* Other options 
 		order: 2;
 	}
 }
 @supports (flex-grow: 1) {
 	.aside {
-		/* flex settings */
+		/* flex settings 
 		flex-grow: 1;
 		flex-shrink: 0;
 		flex-basis: 100px;
-		/* Other options */
+		/* Other options 
 		background-color: #EFEAD0;
 		padding: 10px;
 		border: 1px solid rgb(145, 145, 145);
@@ -129,14 +139,6 @@ body	{
 }
 .postList li{
 	margin-bottom: 5px;
-}
-bonanza-footer {
-	background-color: #242424;
-	color: #fff;
-	text-align: center;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
 }
 
 

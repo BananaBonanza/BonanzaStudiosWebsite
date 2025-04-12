@@ -2,7 +2,120 @@
 body	{
 	font-family: Arial, Helvetica, sans-serif;
 	background-image: url('GeometryBackground.jpg');
+	margin: 0;
+	padding: 0;
 }
+
+header {
+	background-color: #fff;
+	color: #000;
+	text-align: center;
+}
+
+nav {
+	background-color: #242424;
+	padding: 10px;
+}
+
+nav a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	margin-right: 10px;
+	display: inline-block;
+}
+
+/* flex container for containerization of articles */
+.container {
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	max-width: 95%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+/* New HTML types for labels */
+main {
+	flex: 3;
+	order: 2;
+}
+article {
+	margin-bottom: 20px;
+	padding: 10px 20px;
+	border: 1px solid rgb(145, 145, 145);
+	margin-right: 10px;
+	margin-left: 10px;
+	background-color: #fff
+}
+article p {
+	text-align: justify;
+}
+.post-meta {
+	font-size: 12px;
+	color: #222;
+}
+.noStyle {
+	color: inherit;
+	text-decoration:none;
+}
+	
+aside {
+	flex: 1;
+	background-color: #EFEAD0;
+	padding: 10px;
+	border: 1px solid rgb(145, 145, 145);
+	order: 1;
+	margin-bottom: 100px;
+}
+.postList li{
+	margin-bottom: 5px;
+}
+footer {
+	background-color: #242424;
+	color: #fff;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+
+/* div classes for splitscreen */
+/* Split screen in half */
+.split {
+	height: 10%;
+	width: 50%;
+	position: absolute;
+	z-index: 1;
+	/* top: 0; */
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+/* control the left side */
+.leftSide {
+	left: 10;
+	background-color: #333;
+}
+/* control the right side */
+.rightSide {
+	right: 10;
+	background-color: red;
+}
+/* for content centered horizontally and vertically */
+.centerContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+/* For centered images */
+.centerImage img {
+	width: 150px;
+	border-radius: 50%;
+}
+
 
 /* div classes for structure */
 div.topHeader {

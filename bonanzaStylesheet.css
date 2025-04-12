@@ -26,7 +26,6 @@ body	{
 		flex-shrink: 0;
 		flex-basis: 100px;
 		/* Other options */
-		display: block;
 		order: 2;
 	}
 	.aside {
@@ -35,7 +34,6 @@ body	{
 		flex-shrink: 0;
 		flex-basis: 100px;
 		/* Other options */
-		display: block;
 		background-color: #EFEAD0;
 		padding: 10px;
 		border: 1px solid rgb(145, 145, 145);
@@ -61,7 +59,6 @@ body	{
 		-ms-flex-shrink: 0;
 		-ms-flex-basis: 100px;
 		/* Other options */
-		display: block;
 		order: 2;
 	}
 	.aside {
@@ -70,7 +67,6 @@ body	{
 		-ms-flex-shrink: 0;
 		-ms-flex-basis: 100px;
 		/* Other options */
-		display: block;
 		background-color: #EFEAD0;
 		padding: 10px;
 		border: 1px solid rgb(145, 145, 145);
@@ -96,7 +92,6 @@ body	{
 		-webkit-flex-shrink: 0;
 		-webkit-flex-basis: 100px;
 		/* Other options */
-		display: block;
 		order: 2;
 	}
 	.aside {
@@ -105,7 +100,6 @@ body	{
 		-webkit-flex-shrink: 0;
 		-webkit-flex-basis: 100px;
 		/* Other options */
-		display: block;
 		background-color: #EFEAD0;
 		padding: 10px;
 		border: 1px solid rgb(145, 145, 145);
